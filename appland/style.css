@@ -1,0 +1,90 @@
+body {
+	padding: 0;
+	margin: 0;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+	background-color: #98d361;
+    color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1 {
+	font-size: 34px;	
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.main {
+    margin-top: 72px;
+    background-color: #98d361;
+}
+
+.main__title,
+.main__description {
+    text-align: center;
+}
+
+.main__description {
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 105px;
+}
+
+
+.list__items {
+    padding: 0;
+    margin: 0;
+}
+
+.list__item {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main__column__clear,
+.main__column__responsive,
+.main__column__smart {
+    padding-top: 115px;
+    margin-bottom: 110px;
+    background-image: url("img/crisp-clear.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.main__column__responsive {
+    background-image: url("img/responsive.png");
+}
+
+.main__column__smart {
+    margin-left: 72px;
+    background-image: url("img/very-smart.png");
+}
+
+.main__column__clear {
+    margin-right: 98px;
+}
+
+.main__column {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.main__column__discription {
+    width: 285px;
+    margin-top: 38px;
+    *letter-spacing: -0.5px;
+}
