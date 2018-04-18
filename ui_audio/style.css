@@ -1,0 +1,128 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.body {
+	padding: 0;
+	margin: 0;
+    *background-color: #999999;
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    height: 100%;
+}
+
+.musicPlayer {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 300px;
+    height: 50px;
+    padding: 8px 29px 9px 29px;
+    margin: 0;
+    background-color: #999999;
+}
+
+.musicPlayer__play,
+.musicPlayer__slider,
+.musicPlayer__sound {
+    list-style: none;
+}
+
+.musicPlayer__play {
+    position: relative;
+    width: 54px;
+    background-color: #565350;
+}
+
+.musicPlayer__play:hover {
+    background-color: red;
+}
+
+.musicPlayer__playArrow {
+    position: absolute;
+    left: 21px;
+    top: 9px;
+    border: 8px solid transparent; 
+    border-left: 15px solid #fff;
+}
+
+.musicPlayer__play:active {
+    background-color: green;
+}
+
+.musicPlayer__slider {
+    position: relative;
+    width: 180px;
+    height: 27px;
+    padding: 8px 11px 8px 7px;
+    margin-top: 3px;
+    margin-left: 8px;
+    background-color: #565350;
+}
+
+.musicPlayer__passedStrip {
+    width: 118px;
+    height: 11px;
+    border-top: 2px solid #464442;
+    border-bottom: 2px solid #464442;
+    border-left: 1px solid #464442;
+    border-right: 1px solid #464442;
+}
+
+.musicPlayer__passedStrip::after {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    content: "";
+    width: 78px;
+    height: 7px;
+    background-color: #333333;
+    z-index: 1;
+}
+
+.musicPlayer__passedStrip::before {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    content: "";
+    width: 58px;
+    height: 7px;
+    background-color: #816fca;
+    z-index: 2;
+}
+
+.musicPlayer__sound {
+    position: absolute;
+    top: 19px;
+    right: 44px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.musicPlayer__soundLine {
+    display: block;
+    width: 3px;
+    height: 11px;
+    margin-left: 1px;
+    background-color: #816fca;
+}
+
+.musicPlayer__soundLine:last-child {
+    margin-left: 0;
+}
+
+.musicPlayer__soundLine:hover,
+.musicPlayer__soundLine:hover ~ .musicPlayer__soundLine {
+    background-color: red;
+}
