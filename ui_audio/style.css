@@ -5,8 +5,8 @@
 }
 
 .body {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
     background-color: #999999;
 }
 
@@ -46,6 +46,7 @@
 }
 
 .musicPlayer__play:hover {
+    cursor: pointer;
     background-color: red;
 }
 
@@ -108,6 +109,10 @@
     right: 44px;
     display: flex;
     flex-direction: row-reverse;
+}
+
+.musicPlayer__sound:hover {
+    cursor: pointer;
 }
 
 .musicPlayer__soundLine {
