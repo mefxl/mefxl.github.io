@@ -9,23 +9,24 @@
     <body class="body">
         <header class="page-header"></header>
         <main class="main">
-           <ul class="main__musicPlayer musicPlayer">
-                <li class="musicPlayer__play">                   
-                    <div class="musicPlayer__playArrow"></div>
-                </li>
-                <li class="musicPlayer__slider">
-                    <div class="musicPlayer__passedStrip"></div>
-                </li>
-                <li class="musicPlayer__sound">
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                    <span class="musicPlayer__soundLine"></span>
-                </li>
-           </ul>
+           <div class="main__musicPlayer musicPlayer">
+                <div class="musicPlayer__play"></div>
+                <div class="musicPlayer__wrapper">
+                    <div class="musicPlayer__slider">
+                        <div class="musicPlayer__playedRange"></div>
+                        <div class="musicPlayer__loadingRange"></div>
+                    </div>
+                    <div class="musicPlayer__sound">
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                        <span class="musicPlayer__sound__line"></span>
+                    </div>
+                </div>
+           </div>
         </main>
         <footer class="page-footer"></footer>
     </body>
