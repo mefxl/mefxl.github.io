@@ -7,7 +7,7 @@
 .body {
 	padding: 0;
 	margin: 0;
-    background-color: #999999;
+    *background-color: #999999;
 }
 
 .main {
@@ -33,24 +33,14 @@
     background-color: #999999;
 }
 
-.musicPlayer__play,
-.musicPlayer__slider,
-.musicPlayer__sound {
-    list-style: none;
-}
-
 .musicPlayer__play {
     position: relative;
     width: 54px;
     background-color: #565350;
 }
 
-.musicPlayer__play:hover {
-    cursor: pointer;
-    background-color: red;
-}
-
-.musicPlayer__playArrow {
+.musicPlayer__play::before {
+    content: "";
     position: absolute;
     left: 21px;
     top: 9px;
@@ -58,12 +48,18 @@
     border-left: 15px solid #fff;
 }
 
+.musicPlayer__play:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
 .musicPlayer__play:active {
     background-color: green;
 }
 
-.musicPlayer__slider {
+.musicPlayer__wrapper {
     position: relative;
+    display: flex;
     width: 180px;
     height: 27px;
     padding: 8px 11px 8px 7px;
@@ -72,50 +68,56 @@
     background-color: #565350;
 }
 
-.musicPlayer__passedStrip {
-    width: 118px;
+.musicPlayer__slider {
+    position: relative;
+    width: 120px;
     height: 11px;
     border-top: 2px solid #464442;
     border-bottom: 2px solid #464442;
-    border-left: 1px solid #464442;
-    border-right: 1px solid #464442;
+    border-left: 1px solid #393938;
+    border-right: 1px solid #393938;
+    background-color: #565350;
+    cursor: pointer;
 }
 
-.musicPlayer__passedStrip::after {
+.musicPlayer__slider:hover {
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+
+.musicPlayer__loadingRange {
     position: absolute;
-    top: 10px;
-    left: 8px;
-    content: "";
+    top: 0;
+    left: 0;
     width: 78px;
     height: 7px;
     background-color: #333333;
-    z-index: 1;
+    z-index: 50;
 }
 
-.musicPlayer__passedStrip::before {
+.musicPlayer__playedRange {
     position: absolute;
-    top: 10px;
-    left: 8px;
-    content: "";
+    top: 0;
+    left: 0;
     width: 58px;
     height: 7px;
     background-color: #816fca;
-    z-index: 2;
+    z-index: 100;
 }
 
 .musicPlayer__sound {
-    position: absolute;
-    top: 19px;
-    right: 44px;
     display: flex;
     flex-direction: row-reverse;
+    margin-left: 13px;
 }
 
 .musicPlayer__sound:hover {
     cursor: pointer;
 }
 
-.musicPlayer__soundLine {
+.musicPlayer__sound__line {
     display: block;
     width: 3px;
     height: 11px;
@@ -123,11 +125,11 @@
     background-color: #816fca;
 }
 
-.musicPlayer__soundLine:last-child {
+.musicPlayer__sound__line:last-child {
     margin-left: 0;
 }
 
-.musicPlayer__soundLine:hover,
-.musicPlayer__soundLine:hover ~ .musicPlayer__soundLine {
+.musicPlayer__sound__line:hover,
+.musicPlayer__sound__line:hover ~ .musicPlayer__sound__line {
     background-color: red;
 }
